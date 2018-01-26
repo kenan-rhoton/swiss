@@ -1,0 +1,54 @@
+[{
+    "round1": [
+        {
+            "Hugo": 1,
+            "Pol": 0
+        },
+        {
+            "Eric": 0,
+            "Gerard": 1
+        },
+        {
+            "Gabriela": 0.5,
+            "Ana": 0.5
+        },
+        {
+            "Axel": 0,
+            "Raúl": 1
+        },
+        {
+            "Cristian": 0.5,
+            "Marc": 0.5
+        },
+        {
+            "Jordana": 1,
+            "Bye": 0
+        }
+    ],
+    "round2": [
+        {
+            "Hugo": 0,
+            "Raúl": 0
+        },
+        {
+            "Jordana": 0,
+            "Gerard": 0
+        },
+        {
+            "Marc": 0,
+            "Gabriela": 0
+        },
+        {
+            "Ana": 0,
+            "Cristian": 0
+        },
+        {
+            "Axel": 0,
+            "Eric": 0
+        },
+        {
+            "Pol": 0,
+            "Antonio": 0
+        }
+    ]
+}]

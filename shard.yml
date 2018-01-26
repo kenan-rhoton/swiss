@@ -1,0 +1,13 @@
+name: swiss
+version: 0.1.0
+
+authors:
+  -  <>
+
+targets:
+  swiss:
+    main: src/swiss.cr
+
+crystal: 0.24.1
+
+license: MIT
