@@ -13,14 +13,6 @@ describe Tournament do
         t.get_points("potatoes").should eq(0)
     end
 
-    it "can accept a single result" do
-        t = Tournament::Swiss.new(player_data)
-        t.add_result({"potatoes" => 1.0, "are" => 0.0})
-        t.get_points("potatoes").should eq(1)
-        t.get_points("are").should eq(0)
-        t.historic.last.should eq({"potatoes" => 1, "are" => 0})
-    end
-
     it "can accept multiple results as an array" do
         t = Tournament::Swiss.new(player_data)
         t.add_results([

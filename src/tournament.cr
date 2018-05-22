@@ -9,13 +9,18 @@ module Tournament
     class Swiss
         getter players : Array(Player)
         getter historic : Array(Hash(String, Float64))
+        property rounds = 0
+        
         def initialize(players : Array(String))
             @players = players.map{|x| Player.new(x)}
             @historic = [] of Hash(String, Float64)
         end
 
         def get_player(name : String)
-            @players.find{|x| x.name == name}
+            player = @players.find{|x| x.name == name}
+            return player if player
+            @players.push Player.new(name)
+            return @players.last
         end
 
         def get_points(player : String)
@@ -32,6 +37,7 @@ module Tournament
         end
 
         def add_results(results : Array(Hash(String, Float64)))
+        	@rounds += 1
             results.each do |result|
                 add_result result
             end
@@ -42,7 +48,11 @@ module Tournament
         end
 
         def get_round : Int32
-            (@historic.size * 2) / @players.size
+        	@rounds
+        end
+
+        def drop(name : String)
+        	@players.reject!{|p| p.name == name}
         end
 
         def choose_white(one, two) : NamedTuple(white: String,
